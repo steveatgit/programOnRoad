@@ -1,0 +1,29 @@
+wqu-m01:programOnRoad wqu$ ./a.out 
+have repeat num
+wqu-m01:programOnRoad wqu$ cat checkRepeatNum.cpp 
+#include<iostream>
+#include<stdio.h>
+#include<vector>
+using namespace std;
+
+bool checkRepeatNum(int arr[], int n)
+{
+	vector<int> hash(100, -1);
+	for(int i=0;i<n;i++) {
+		if(hash[arr[i]] != -1) {
+			return true;
+		}
+		hash[arr[i]]++;
+	}
+	return false;
+}
+
+int main()
+{
+	int arr[10] = {2,1,3,5,2,6,4};
+	if(checkRepeatNum(arr, 6)) {
+		cout<<"have repeat num"<<endl;
+	} else {
+		cout<<"don't have repeat num"<<endl;
+	}
+}
