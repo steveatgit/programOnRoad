@@ -1,3 +1,4 @@
+给一个数组，判定其中是否有重复元素
 wqu-m01:programOnRoad wqu$ ./a.out 
 have repeat num
 wqu-m01:programOnRoad wqu$ cat checkRepeatNum.cpp 
